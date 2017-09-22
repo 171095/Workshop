@@ -1,16 +1,33 @@
-<h2>Forgot your password?</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+<div style="margin-top:8%;"></div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="well workshop-title-well">
+      <h2 class="text-center">Welcome to Rails Workshop</h2>
+    </div>
+    <div class="panel panel-info reg-panel">
+      <div class="panel-heading reg-info">
+        <h3 class="panel-title">Forget Password</h3>
+      </div>
+      <div class="panel-body">
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+              <div class="input-group form-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                <%= f.email_field :email, autocomplete: "off",autofocus: true, placeholder: "email", class: "form-control input-lg" %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">    
+              <div class="actions">
+                <%= f.submit "Send me reset password instructions", class: "btn btn-register btn-lg btn-block" %>
+              </div>
+            </div>
+          </div>
+          <% end %>
+      </div>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>

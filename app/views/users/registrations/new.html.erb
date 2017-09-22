@@ -1,65 +1,107 @@
-<h2>Sign up</h2>
+<div style="margin-top:8%;"></div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="well workshop-title-well">
+      <h2 class="text-center">Register Here For Rails Workshop</h2>
+    </div>
+    <div class="panel panel-info reg-panel">
+      <div class="panel-heading reg-info">
+        <h3 class="panel-title">Submit Your Details Here</h3>
+      </div>
+      <div class="panel-body">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group form-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <%= f.text_field :first_name, autocomplete: "off", placeholder: "First Name", class: "form-control input-lg" %>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group form-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <%= f.text_field :last_name, autocomplete: "off", placeholder: "Last Name", class: "form-control input-lg" %>
+              </div>
+            </div>
+          </div>
 
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.password_field :first_name, autocomplete: "off" %>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group form-group">
+                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                <%= f.text_field :contact, autocomplete: "off", placeholder: "Contact", class: "form-control input-lg" %>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group form-group">
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <%= f.email_field :email, autocomplete: "off", placeholder: "Email", class: "form-control input-lg" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group form-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <%= f.password_field :password, autocomplete: "off", placeholder: "Password (6 characters minimum)", class: "form-control input-lg" %>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group form-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Repeat your password", class: "form-control input-lg" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group form-group">
+                <span class="input-group-addon"><i class="fa fa-book"></i></span>
+                <%= f.text_field :degree, autocomplete: "off", placeholder: "Degree", class: "form-control input-lg" %>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group form-group">
+                <span class="input-group-addon"><i class="fa fa-check"></i></span>
+                <%= f.text_field :current_status, autocomplete: "off", placeholder: "Current Status", class: "form-control input-lg" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group form-group">
+                <span class="input-group-addon"><i class="fa fa-university"></i></span>
+                <%= f.text_field :college, autocomplete: "off", placeholder: "College", class: "form-control input-lg" %>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group form-group">
+                <span class="input-group-addon"><i class="fa fa-book"></i></span>
+
+                <%= f.text_field :batch, autocomplete: "off", placeholder: "Batch (Eg. 2011)", class: "form-control input-lg" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group form-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+            <%= f.text_field :address, autocomplete: "off", placeholder: "Address", class: "form-control input-lg" %>
+          </div>   
+
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4">    
+              <div class="actions">
+                <%= f.submit "Sign up", class: "btn btn-register btn-lg btn-block" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.password_field :last_name, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :contact %><br />
-    <%= f.password_field :contact, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.password_field :address, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :college %><br />
-    <%= f.password_field :college, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_status %><br />
-    <%= f.password_field :current_status, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :degree %><br />
-    <%= f.password_field :degree, autocomplete: "off" %>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>

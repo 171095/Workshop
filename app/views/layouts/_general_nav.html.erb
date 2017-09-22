@@ -1,0 +1,25 @@
+<!--Navigation bar-->
+<nav class="navbar navbar-default nav-topper navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><%= image_tag "NextstepPNG", class: "img-responsive", style: "width:200px;height:25px;" %></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#feature">About Us</a></li>
+        <li><a href="https://nsdigitalsolution.com" target="_blank">Organisations</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <li class="btn-trial">
+          <%= link_to "Register", new_user_registration_path %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!--/ Navigation bar-->

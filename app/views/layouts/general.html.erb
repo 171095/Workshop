@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Workshop</title>
+    <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'general', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'general', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render "layouts/general_nav" %>
+    <%= yield %>
+    <div style="margin:8%;"></div>
+    <%= render "layouts/general_footer" %>
+  </body>
+</html>

@@ -1,6 +1,160 @@
-<h1>Welcome to NextStep Digital Solution</h1>
+ <!--Banner-->
+ <div class="banner">
+  <div class="bg-color">
+    <div class="container">
+      <div class="row">
+        <div class="banner-text text-center">
+          <div class="text-border">
+            <h2 class="text-dec">Trust & Quality</h2>
+          </div>
+          <div class="intro-para text-center quote">
+            <p class="big-text">Learning Today . . . Leading Tomorrow.</p>
+            <p class="small-text">We are stuck with technology when what we really want is just stuff that works.</p>
+            <a href="" class="btn get-quote">GET A QUOTE</a>
+          </div>
+          <a href="#feature" class="mouse-hover"><div class="mouse"></div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/ Banner-->
 
-<%= link_to "Sign In", new_user_session_path, class: "btn btn-primary"%>
+<!--Feature-->
+<section id ="feature" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="header-section text-center">
+        <h2>About Us</h2>
+        <p><strong>NextStep Digital Solution</strong> <br>We imparts qualitative training in Ruby on Rails, Angular JS, Python, Django,
+        ReactJS, PHP, Laeavel, NodeJS, Android and other latest technologies. Our training program is mainly designed
+        for the BE/BTech/MCA/BCA/MSc/BSc students who want to speed up their technical skills and proficiencies into real time development environment.</p>
+        <hr class="bottom-line">
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ feature-->
 
 
-<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary"%>
+<!--work-shop-->
+<section id="work-shop" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="header-section text-center">
+        <h2>Upcoming Workshop</h2>
+        <p>Bringing to you latest technologies<br> </p>
+        <hr class="bottom-line">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="service-box text-center">
+          <div class="icon-box">
+            <%= image_tag "ror.png", class: "img-responsive", style: "width:300px;height:280px;"  %>
+          </div>
+          <div class="icon-text">
+            <h4 class="ser-text">Full Stack Development Ruby on Rails</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="service-box text-center">
+          <div class="icon-box">
+            <%= image_tag "django.jpg", class: "img-responsive", style: "width:300px;height:280px;" %>
+          </div>
+          <div class="icon-text">
+            <h4 class="ser-text">Full Stack Development Django</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="service-box text-center">
+          <div class="icon-box">
+            <%= image_tag "angularjs.png", class: "img-responsive", style: "width:300px;height:280px;" %>
+          </div>
+          <div class="icon-text">
+            <h4 class="ser-text">Dynamic Front End with Angular Js</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ work-shop-->
+
+<!--Courses-->
+<section id ="courses" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="header-section text-center">
+        <h2>Courses</h2>
+        <p>At NextStep Digital Solution we provide training on current demand technologies.<br> We believe in Full Stack product development.</p>
+        <hr class="bottom-line">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 padleft-right">
+        <figure class="imghvr-fold-up">
+          <%= image_tag "ruby-on-rails.png", class: "img-responsive", style: "width:400px;height:255px;" %>
+          <figcaption>
+            <h3>Ruby on Rails</h3>
+            <p>​Rails is a framework for building websites. One of the most powerful ways to quickly develop web applications, Ruby on Rails has a high relevance and demand in today's marketplace.</p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
+      <div class="col-md-4 col-sm-6 padleft-right">
+        <figure class="imghvr-fold-up">
+          <%= image_tag "python-django.jpg", class: "img-responsive", style: "width:400px;height:255px;" %>
+          <figcaption>
+            <h3>django</h3>
+            <p>A high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web developmen.</p> 
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
+      <div class="col-md-4 col-sm-6 padleft-right">
+        <figure class="imghvr-fold-up">
+          <%= image_tag "angularjs-logo-1024x547.png", class: "img-responsive", style: "width:400px;height:255px;" %>
+          <figcaption>
+            <h3>AngularJS</h3>
+            <p>​​A structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly.</p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
+      <div class="col-md-4 col-sm-6 padleft-right">
+        <figure class="imghvr-fold-up">
+          <%= image_tag "react.png", class: "img-responsive", style: "width:400px;height:255px;" %>
+          <figcaption>
+            <h3>ReactJS</h3>
+            <p>​React is a front-end library developed by Facebook. It is used for handling the view layer for web and mobile apps. ReactJS allows us to create reusable UI components.</p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
+      <div class="col-md-4 col-sm-6 padleft-right">
+        <figure class="imghvr-fold-up">
+          <%= image_tag "php-laravel.png", class: "img-responsive", style: "width:400px;height:255px;" %>
+          <figcaption>
+            <h3>PHP Laravel</h3>
+            <p>MVC framework with bundles, migrations, and Artisan CLI. Laravel offers a robust set of tools and an application architecture that incorporates many of the best features of frameworks like CodeIgniter, Yii, ASP.NET MVC, Sinatra, and others.</p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
+      <div class="col-md-4 col-sm-6 padleft-right">
+        <figure class="imghvr-fold-up">
+          <%= image_tag "java_8.png", class: "img-responsive", style: "width:400px;height:255px;" %>
+          <figcaption>
+            <h3>Java</h3>
+            <p>Java technology is used to develop applications for a wide range of environments, from consumer devices to heterogeneous enterprise systems.</p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Courses-->
