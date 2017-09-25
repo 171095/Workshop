@@ -14,9 +14,13 @@
         <li><a href="#feature">About Us</a></li>
         <li><a href="https://nsdigitalsolution.com" target="_blank">Organisations</a></li>
         <li><a href="#courses">Courses</a></li>
+        <% if user_signed_in? %>
+          <li class="btn-trial"> <%= link_to "Sign Out", destroy_user_session_path , method: :delete %></li>
+          <% else %>
         <li><%= link_to "Sign In", new_user_session_path %></li>
         <li class="btn-trial">
           <%= link_to "Register", new_user_registration_path %>
+          <%end%>
         </li>
       </ul>
     </div>
