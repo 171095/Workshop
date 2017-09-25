@@ -1,0 +1,42 @@
+form-group<%= form_for(course_registration) do |f| %>
+  <% if course_registration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(course_registration.errors.count, "error") %> prohibited this course_registration from being saved:</h2>
+
+      <ul>
+      <% course_registration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :contact %>
+    <%= f.text_field :contact, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :course_id %>
+    <%= f.select :course_id, options_for_select(Course.all.collect{|c| [c.id, c.name]}), {prompt: "Select Course Category"}, {class: "form-control"} %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

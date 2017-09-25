@@ -94,66 +94,18 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-sm-6 padleft-right">
-        <figure class="imghvr-fold-up">
-          <%= image_tag "ruby-on-rails.png", class: "img-responsive", style: "width:400px;height:255px;" %>
-          <figcaption>
-            <h3>Ruby on Rails</h3>
-            <p>​Rails is a framework for building websites. One of the most powerful ways to quickly develop web applications, Ruby on Rails has a high relevance and demand in today's marketplace.</p>
-          </figcaption>
-          <a href="#"></a>
-        </figure>
-      </div>
-      <div class="col-md-4 col-sm-6 padleft-right">
-        <figure class="imghvr-fold-up">
-          <%= image_tag "python-django.jpg", class: "img-responsive", style: "width:400px;height:255px;" %>
-          <figcaption>
-            <h3>django</h3>
-            <p>A high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web developmen.</p> 
-          </figcaption>
-          <a href="#"></a>
-        </figure>
-      </div>
-      <div class="col-md-4 col-sm-6 padleft-right">
-        <figure class="imghvr-fold-up">
-          <%= image_tag "angularjs-logo-1024x547.png", class: "img-responsive", style: "width:400px;height:255px;" %>
-          <figcaption>
-            <h3>AngularJS</h3>
-            <p>​​A structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly.</p>
-          </figcaption>
-          <a href="#"></a>
-        </figure>
-      </div>
-      <div class="col-md-4 col-sm-6 padleft-right">
-        <figure class="imghvr-fold-up">
-          <%= image_tag "react.png", class: "img-responsive", style: "width:400px;height:255px;" %>
-          <figcaption>
-            <h3>ReactJS</h3>
-            <p>​React is a front-end library developed by Facebook. It is used for handling the view layer for web and mobile apps. ReactJS allows us to create reusable UI components.</p>
-          </figcaption>
-          <a href="#"></a>
-        </figure>
-      </div>
-      <div class="col-md-4 col-sm-6 padleft-right">
-        <figure class="imghvr-fold-up">
-          <%= image_tag "php-laravel.png", class: "img-responsive", style: "width:400px;height:255px;" %>
-          <figcaption>
-            <h3>PHP Laravel</h3>
-            <p>MVC framework with bundles, migrations, and Artisan CLI. Laravel offers a robust set of tools and an application architecture that incorporates many of the best features of frameworks like CodeIgniter, Yii, ASP.NET MVC, Sinatra, and others.</p>
-          </figcaption>
-          <a href="#"></a>
-        </figure>
-      </div>
-      <div class="col-md-4 col-sm-6 padleft-right">
-        <figure class="imghvr-fold-up">
-          <%= image_tag "java_8.png", class: "img-responsive", style: "width:400px;height:255px;" %>
-          <figcaption>
-            <h3>Java</h3>
-            <p>Java technology is used to develop applications for a wide range of environments, from consumer devices to heterogeneous enterprise systems.</p>
-          </figcaption>
-          <a href="#"></a>
-        </figure>
-      </div>
+      <% @courses.each do |course| %>  
+        <div class="col-md-4 col-sm-6 padleft-right">
+          <figure class="imghvr-fold-up">
+            <%= image_tag course.banner_image_url, class: "img-responsive", style: "width:400px;height:255px;" %>
+            <figcaption>
+              <h3><%= course.name %></h3>
+              <p>​<%= course.description %>.</p>
+            </figcaption>
+            <%= link_to "", course_path(course) %>
+          </figure>
+        </div>
+      <% end %>
     </div>
   </div>
 </section>

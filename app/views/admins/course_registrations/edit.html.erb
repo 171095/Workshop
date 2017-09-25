@@ -1,0 +1,12 @@
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Edit Registration</h3>
+    </div>
+    <div class="panel-body">
+      <%= render 'form', course_registration: @course_registration %>
+      <%= link_to 'Show', admins_course_registration_path(@course_registration), class: "btn btn-primary" %> |
+      <%= link_to 'Back', admins_course_registrations_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

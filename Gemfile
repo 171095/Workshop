@@ -64,3 +64,5 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
+gem 'carrierwave', '~> 1.0'

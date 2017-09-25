@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @course.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @course.description %>
+</p>
+
+<p>
+  <strong>Course fees:</strong>
+  <%= @course.course_fees %>
+</p>
+
+<p>
+  <strong>Course duration:</strong>
+  <%= @course.course_duration %>
+</p>
+
+<p>
+  <strong>Banner image:</strong>
+  <%= image_tag @course.banner_image_url %>
+</p>
+
+
+<%= link_to "Enroll into the course", "#", class: "btn btn-primary", "data-toggle" => "modal", "data-target" => "#myModal" %>
+
+
+<%= link_to 'Back', root_path %>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+</div>
