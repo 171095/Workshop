@@ -1,5 +1,7 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show]
+  
+
 
   def show
   end
@@ -19,11 +21,11 @@ class CoursesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course
-      @course = Course.find(params[:id])
+      @course = Course.friendly.find(params[:id])
     end
 
     def course_enrollment_params
-      params.require(:create_course_enrollment).permit(:first_name, :last_name, :course_id, :email, :contact)
+      params.require(:create_course_enrollment).permit(:first_name, :last_name, :course_id, :email, :contact,:slug)
     end
 
 end
