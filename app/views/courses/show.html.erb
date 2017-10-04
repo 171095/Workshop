@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-
+<p class="pdf_link btn-position"><%= link_to "Download Invoice (PDF)",course_path(@course, :format => "pdf"), class: "btn btn-warning" %></p>
+ 
 <div class="col-md-12 col-xs-12 col-sm-12">
   <%= image_tag @course.banner_image_url, class: "img-responsive", style: "width:100%;height:280px;" %>
 </div>
@@ -15,10 +16,10 @@
           <%= @course.description.html_safe %>
         </p>
 
-        <%= link_to "Enroll into the course", new_course_enrollment_courses_path(course_id: @course.id), remote: true, class: "btn btn-primary", "data-toggle" => "modal", "data-target" => "#myModal" %>
+       <p class="pdf_link"><%= link_to "Enroll into the course", new_course_enrollment_courses_path(course_id: @course.id), remote: true, class: "btn btn-primary", "data-toggle" => "modal", "data-target" => "#myModal" %></p>
 
 
-        <%= link_to 'Back', root_path %>
+       <p class="pdf_link"> <%= link_to 'Back', root_path %></p>
     </div>
     <div class="col-md-4 col-sm-4">
       <div class="panel panel-default">

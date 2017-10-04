@@ -67,3 +67,5 @@ end
 
 gem 'carrierwave', '~> 1.0'
 gem 'ckeditor'
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'
