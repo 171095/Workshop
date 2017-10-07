@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @chapter.name %></h3>
+  </div>
+  <div class="panel-body">
+    <%= @chapter.details.html_safe %>
+  </div>
+</div>
+
+
+<p>
+  <strong>Course module:</strong>
+  <%= @chapter.course_module.name %>
+</p>
+
+<%= link_to 'Edit', edit_admins_chapter_path(@chapter) %> |
+<%= link_to 'Back', admins_chapters_path %>

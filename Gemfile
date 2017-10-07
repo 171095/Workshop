@@ -56,6 +56,7 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
 
+
 group :development, :test do 
   gem 'sqlite3'
 end
