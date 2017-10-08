@@ -1,3 +1,7 @@
 .btn-position{
   float: right;
 }
+.chapter-link {
+  text-decoration: none;
+  color:blue !important;
+}

@@ -10,7 +10,7 @@
           <div class="panel-body">
             <% mod.chapters.each do |chapter| %>
               <ul>
-                <li><%= link_to chapter.name, course_course_module_chapter_path(@course, mod, chapter) %></li>
+                <li><%= link_to chapter.name, course_course_module_chapter_path(@course, mod, chapter), target: "_blank", class: "chapter-link" %></li>
               </ul>
             <% end %>
           </div>
