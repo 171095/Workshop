@@ -71,3 +71,5 @@ gem 'ckeditor'
 gem 'pdfkit'
 gem 'wkhtmltopdf-binary'
 gem 'friendly_id', '~> 5.1.0'
+gem 'cancancan', '~> 2.0'
+gem "cocoon"

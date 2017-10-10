@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171007104647) do
+ActiveRecord::Schema.define(version: 20171009100507) do
+
+  create_table "assignments", force: :cascade do |t|
+    t.integer  "chapter_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "chapters", force: :cascade do |t|
     t.string   "name"
@@ -18,6 +24,7 @@ ActiveRecord::Schema.define(version: 20171007104647) do
     t.integer  "course_module_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "slug"
     t.index ["course_module_id"], name: "index_chapters_on_course_module_id"
   end
 
@@ -27,6 +34,7 @@ ActiveRecord::Schema.define(version: 20171007104647) do
     t.integer  "course_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "slug"
     t.index ["course_id"], name: "index_course_modules_on_course_id"
   end
 
@@ -73,6 +81,13 @@ ActiveRecord::Schema.define(version: 20171007104647) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
+  create_table "problems", force: :cascade do |t|
+    t.text     "question"
+    t.integer  "assignment_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -94,6 +109,7 @@ ActiveRecord::Schema.define(version: 20171007104647) do
     t.string   "current_status"
     t.string   "degree"
     t.integer  "batch"
+    t.string   "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

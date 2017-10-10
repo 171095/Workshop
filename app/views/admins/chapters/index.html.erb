@@ -14,8 +14,8 @@
   <tbody>
     <% @chapters.each do |chapter| %>
       <tr>
-        <td><%= chapter.name %></td>
-        <td><%= chapter.course_module.name %></td>
+        <td><%= chapter.try(:name) %></td>
+        <td><%= chapter.course_module.try(:name) %></td>
         <td><%= link_to 'Show', admins_chapter_path(chapter) %></td>
         <td><%= link_to 'Edit', edit_admins_chapter_path(chapter)  %></td>
         <td><%= link_to 'Destroy', admins_chapter_path(chapter), method: :delete, data: { confirm: 'Are you sure?' } %></td>

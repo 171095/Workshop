@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :problems
+  resources :assignments
+  get '/dashboard' => "dashboard#students"
+
+  get '/admin-dashboard' => "dashboard#admins"
+
   resources :faqs
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations', passwords: 'users/passwords' }
   get 'home/index'
@@ -21,6 +27,7 @@ Rails.application.routes.draw do
     resources :faqs
     resources :chapters
     resources :course_modules
+    resources :assignments
   end
 
 end

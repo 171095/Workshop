@@ -1,0 +1,32 @@
+<%= form_for [:admins,assignment] do |f| %>
+  <% if assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assignment.errors.count, "error") %> prohibited this assignment from being saved:</h2>
+
+      <ul>
+      <% assignment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :chapter_id %>
+    <%= f.number_field :chapter_id %>
+  </div>
+
+  <div id="problems">
+    <%= f.fields_for :problems do |problem| %>
+      <%= render 'problem_fields', f: problem %>
+    <% end %>
+    <div class="links fd">
+      <%= link_to_add_association 'add problem', f, :problems, class: "btn btn-primary" %>
+    </div>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -21,14 +21,14 @@
     background-color: #FFF;
   }
 
-  #container {
+  .container {
     width: auto;
     margin: 0;
     padding: 0;
     border: none;
   }
   
-  #line_items {
+  .line_items {
     page-break-before: always;
   }
 

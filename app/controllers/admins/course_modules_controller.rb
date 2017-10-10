@@ -64,7 +64,7 @@ class Admins::CourseModulesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course_module
-      @course_module = CourseModule.find(params[:id])
+      @course_module = CourseModule.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
