@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :chapter_id %>
-    <%= f.number_field :chapter_id %>
+    <%= f.select :chapter_id , Chapter.all.map { |c| [c.name,c.id]  } %>
   </div>
 
   <div id="problems">
     <%= f.fields_for :problems do |problem| %>
-      <%= render 'problem_fields', f: problem %>
+      <%= render 'problem_fields', f: problem  %>
     <% end %>
     <div class="links fd">
-      <%= link_to_add_association 'add problem', f, :problems, class: "btn btn-primary" %>
+      <%= link_to_add_association 'add question', f, :problems, class: "btn btn-primary" %>
     </div>
   </div>
 

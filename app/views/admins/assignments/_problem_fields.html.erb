@@ -1,11 +1,16 @@
 <div class="nested-fields">
-  <div class="field abn">
+<div class="row">
+  <div class="field">
     <%= f.label :question %>
     <br/>
-    <div class="col-md-10">
-    <%= f.text_field :question , class: "form-control" %>
-</div>  
-<div class="col-md-2">
-  <%= link_to_remove_association "X", f , class: "btn btn-danger" %>
-  </div></div>
+
+    <div class="col-md-7">
+      <%= f.cktext_area :question %>
+    </div>
+  </div>  
+  <div class="col-md-2">
+    <%= link_to_remove_association "X", f , class: "btn btn-danger" %>
+  </div>
 </div>
+</div>
+
